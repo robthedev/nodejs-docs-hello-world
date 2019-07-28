@@ -25,16 +25,10 @@ app.use("/api", apiRouter);
 
 //serve static assets
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("./client/build"));
+    app.use(express.static("../client"));
     app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "./client", "build", "index.html"));
+        res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
     });
 }
 
-const port = process.env.PORT || 6520;
-
-app.listen(port, () => {
-    console.log(
-        `app listening on ${process.env.PORT ? process.env.PORT : port} ${process.env ? process.env : 'NO'}!`
-    );
-});
+export default app;
