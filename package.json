@@ -9,7 +9,7 @@
     "devserver": "nodemon --exec babel-node index.js",
     "dev": "concurrently \"npm run devserver\" \"npm run client\"",
     "client-setup": "npm install --prefix ../reactapp && npm run build --prefix ./client",
-    "start": "babel-node index.js && npm run client-setup"
+    "start": "node index.js && npm run client-setup"
   },
   "keywords": [],
   "author": "robdev",

@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-    // roots
     "password": "password",
-    // azure pw upper 1 + !
     "database": "libtrackrdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
