@@ -15,11 +15,11 @@
     "client-setup": "npm install --prefix ./client && npm run build --prefix ./client",
     "start": "npm run prod && npm run client-setup",
     "server": "babel-node ./src/bin/www",
-    "server:prod": "node ./dist/bin/www",
+    "server:prod": "node ./bin/www",
     "clean": "rimraf dist",
-    "build": "./node_modules/@babel/cli/bin/babel.js ./src --out-dir dist",
+    "build": " ./src --out-dir dist",
     "postinstall": "npm install",
-    "prod": "NODE_ENV=production npm-run-all clean postinstall build server:prod"
+    "prod": "NODE_ENV=production npm-run-all clean postinstall server:prod"
   },
   "keywords": [],
   "author": "robdev",
