@@ -18,7 +18,8 @@
     "server:prod": "node ./dist/bin/www",
     "clean": "rimraf dist",
     "build": "babel ./src --out-dir dist",
-    "prod": "NODE_ENV=production npm-run-all clean build server:prod"
+    "postinstall": "npm install",
+    "prod": "NODE_ENV=production npm-run-all clean postinstall build server:prod"
   },
   "keywords": [],
   "author": "robdev",
