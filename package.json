@@ -17,7 +17,7 @@
     "server": "babel-node ./src/bin/www",
     "server:prod": "node ./dist/bin/www",
     "clean": "rimraf dist",
-    "build": "babel ./src --out-dir dist",
+    "build": "./node_modules/babel-cli/bin/babel-node.js ./src --out-dir dist",
     "postinstall": "npm install",
     "prod": "NODE_ENV=production npm-run-all clean postinstall build server:prod"
   },
