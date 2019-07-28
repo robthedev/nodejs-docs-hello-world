@@ -1,10 +1,10 @@
 // import "dotenv/config";
-import express from "express";
-import bodyParser from "body-parser";
-import passport from "passport";
-import logger from "morgan";
+const express = require("express");
+const bodyParser = require("body-parser");
+const passport = require("passport");
+const logger = require("morgan");
 
-import apiRouter from "./routes/api";
+const apiRouter = require("./routes/api");
 const auth = require("./routes/api/auth");
 const books = require("./routes/api/books");
 
