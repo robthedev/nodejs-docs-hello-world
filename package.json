@@ -15,7 +15,7 @@
     "client-setup": "npm install --prefix ./client && npm run build --prefix ./client",
     "start": "npm run prod && npm run client-setup",
     "server": "babel-node ./src/bin/www",
-    "server:prod": "node ./bin/www",
+    "server:prod": "node ./src/bin/www",
     "clean": "rimraf dist",
     "build": " ./src --out-dir dist",
     "postinstall": "npm install",
